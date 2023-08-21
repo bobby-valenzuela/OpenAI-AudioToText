@@ -25,19 +25,44 @@
    ```
 
 6. Create a .env file with your OpenAI api key
-
    ```bash
    echo "OPENAI_API_KEY={api_secret}" > .env 
    ```
+7. Install [pyaudio](https://pypi.org/project/PyAudio/#:~:text=INSTALLATION)
+
 
 <br />
 
 
 ## Usage
-Description forthcoming...
 
 <br />
 
 ```bash
 python3 audiototext.py
+```
+
+<br />
+
+## Running Whisper Locally
+
+[Import whisper](https://analyzingalpha.com/openai-whisper-python-tutorial)
+```sh
+pip install -U openai-whisper
+```
+
+<br>
+
+Import whisper + Load model (using base here)
+```sh
+import whisper
+model = whisper.load_model("base")
+```
+
+<br>
+
+Transcribe
+```sh
+result = model.transcribe("mysample.wav")
+result["text"]
 ```
