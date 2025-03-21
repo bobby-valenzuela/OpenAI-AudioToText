@@ -1,4 +1,4 @@
-# OpenAI-DALL-E-ImageGenerator
+# OpenAI-AudioToText
 
 ## Setup
 
